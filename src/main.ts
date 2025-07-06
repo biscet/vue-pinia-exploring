@@ -1,5 +1,11 @@
 import { createApp } from "vue";
-import "./style.css";
-import App from "./App.vue";
 
-createApp(App).mount("#app");
+import "./utils/styles/reset.scss";
+import "./utils/styles/global.scss";
+
+import App from "./App.vue";
+import { start } from "./utils/helpers";
+
+const app = createApp(App);
+
+start(app);
