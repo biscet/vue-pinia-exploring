@@ -1,10 +1,10 @@
 <script setup lang="ts">
     import { storeToRefs } from 'pinia';
     import { useTasksStore } from '../stores/tasks';
+    import { useTasksPaginationStore } from '../stores/tasksPagination';
 
-    const tasksStore = useTasksStore();
-    const { paginated } = storeToRefs(tasksStore);
-    const { setIsDone } = tasksStore; 
+    const { setIsDone } = useTasksStore();
+    const { paginated } = storeToRefs(useTasksPaginationStore());
 </script>
 
 <template>
